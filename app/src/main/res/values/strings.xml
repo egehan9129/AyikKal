@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AyıkKal</string>
+    <string name="accessibility_label">AyıkKal Kalkanı</string>
+    <string name="accessibility_description">Sarhoş Modu açıkken seçtiğin uygulamaların (WhatsApp, Instagram vb.) açılmasını engeller. Yalnızca hangi uygulamanın ön planda olduğunu okur; yazdıklarını kaydetmez ve hiçbir yere göndermez. Sarhoş Modu kapalıyken hiçbir şey yapmaz.</string>
+</resources>

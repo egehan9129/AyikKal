@@ -1,0 +1,29 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <group
+        android:scaleX="2"
+        android:scaleY="2"
+        android:translateX="30"
+        android:translateY="29">
+        <!-- Kalkan -->
+        <path
+            android:fillColor="#4EDEA3"
+            android:pathData="M12,1L3,5v6c0,5.55 3.84,10.74 9,12 5.16,-1.26 9,-6.45 9,-12L21,5l-9,-4z" />
+        <!-- Kilit gövdesi -->
+        <path
+            android:fillColor="#0A0E18"
+            android:pathData="M8.5,11h7a1,1 0,0 1,1 1v4.5a1,1 0,0 1,-1 1h-7a1,1 0,0 1,-1 -1V12a1,1 0,0 1,1 -1z" />
+        <!-- Kilit halkası -->
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M9.6,11V9.4a2.4,2.4 0,0 1,4.8 0V11"
+            android:strokeWidth="1.6"
+            android:strokeColor="#0A0E18" />
+        <path
+            android:fillColor="#4EDEA3"
+            android:pathData="M12,13.2a1,1 0,1 1,0 2a1,1 0,1 1,0 -2z" />
+    </group>
+</vector>

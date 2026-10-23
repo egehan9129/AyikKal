@@ -1,0 +1,22 @@
+# Gradle / build çıktıları
+.gradle/
+.kotlin/
+build/
+captures/
+
+# Makineye özel ayarlar (SDK yolu, kullanıcı adı içerir)
+local.properties
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Kişisel / tekrar eden dosyalar
+*.apk
+*.aab
+*.keystore
+*.jks
+*.zip
+.DS_Store
+Thumbs.db
