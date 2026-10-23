@@ -18,8 +18,23 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    // Release anahtarı repoda değil; ~/.gradle/gradle.properties içindeki AYIKKAL_* değerlerinden okunur.
+    // Değerler yoksa (başkasının makinesi, CI) release debug anahtarıyla imzalanır.
+    val storeFilePath = providers.gradleProperty("AYIKKAL_STORE_FILE").orNull
+    signingConfigs {
+        if (storeFilePath != null) {
+            create("release") {
+                storeFile = file(storeFilePath)
+                storePassword = providers.gradleProperty("AYIKKAL_STORE_PASSWORD").get()
+                keyAlias = providers.gradleProperty("AYIKKAL_KEY_ALIAS").get()
+                keyPassword = providers.gradleProperty("AYIKKAL_KEY_PASSWORD").get()
+            }
+        }
+    }
+
     buildTypes {
         release {
+            signingConfig = signingConfigs.findByName("release") ?: signingConfigs.getByName("debug")
             isMinifyEnabled = true
             isShrinkResources = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
